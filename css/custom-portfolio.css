@@ -1,0 +1,60 @@
+
+/* Tipografia e centralização */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #333;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 span.text-gradient {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Cartão de projeto aprimorado */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.015);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-body ul {
+    padding-left: 1.2rem;
+}
+
+/* Botões personalizados */
+.btn-outline-light {
+    border-width: 2px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #0d6efd;
+}
+
+/* Rodapé centralizado */
+footer .small {
+    text-align: center;
+    width: 100%;
+}
+
+/* Navbar destaque */
+.navbar-brand span {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
