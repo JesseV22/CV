@@ -11731,4 +11731,36 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+
+/* Tema claro (padrão) */
+:root {
+  --main-bg: #ffffff;
+  --main-text: #212529;
+  --main-link: #1e30f3;
+}
+
+/* Tema escuro */
+[data-theme="dark"] {
+  --main-bg: #121212;
+  --main-text: #e0e0e0;
+  --main-link: #66b2ff;
+
+  --bs-body-bg: #121212;
+  --bs-body-color: #e0e0e0;
+  --bs-link-color: #66b2ff;
+  --bs-link-hover-color: #99ccff;
+}
+
+/* Aplicando as variáveis ao corpo */
+body {
+  background-color: var(--main-bg);
+  color: var(--main-text);
+}
+
+a {
+  color: var(--main-link);
+}
+a:hover {
+  color: var(--bs-link-hover-color, #99ccff);
+}
 }
