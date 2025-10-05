@@ -230,3 +230,49 @@
 </script>
     </body>
 </html>
+<style>
+  :root {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-card-bg: #f8f9fa;
+  --color-link: #007bff;
+  --color-primary: #1e30f3;
+  --color-border: #dee2e6;
+  /* Adicione outras variáveis conforme necessário */
+}
+
+[data-theme="dark"] {
+  --color-bg: #181a1b;
+  --color-text: #e0e0e0;
+  --color-card-bg: #23272a;
+  --color-link: #66b2ff;
+  /* Adicione outras variáveis conforme necessário */
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: 0.2s all;
+}
+
+.theme-toggle-btn {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 999;
+  background: var(--color-card-bg, #fff);
+  color: var(--color-primary, #1e30f3);
+  border: 1px solid var(--color-border, #dee2e6);
+  border-radius: 1rem;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(30,48,243,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+  background: #23272a;
+  color: #66b2ff;
+  border-color: #333;
+}
+</style>
