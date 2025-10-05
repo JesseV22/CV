@@ -18,7 +18,11 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body class="d-flex flex-column h-100">
-      <button class="theme-toggle" onclick="toggleTheme()">🌓 Alternar tema</button>
+      <button id="theme-switch" class="theme-switch" aria-label="Alternar tema">
+  <span class="switch-slider"></span>
+  <span class="switch-icon moon">&#9790;</span>
+  <span class="switch-icon sun">&#9728;</span>
+</button>
         <main class="flex-shrink-0">
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
