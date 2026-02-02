@@ -3,6 +3,7 @@
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-personal/blob/master/LICENSE)
 */
+<<<<<<< HEAD
 
 // Scroll Animation Observer
 document.addEventListener('DOMContentLoaded', () => {
@@ -56,3 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+=======
+// This file is intentionally blank
+// Use this file to add JavaScript to your project
+>>>>>>> 53ed109f09013b67ba11ce3149dd4a423394d041
