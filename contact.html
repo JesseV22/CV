@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<<<<<<< HEAD
 
 <head>
   <meta charset="utf-8" />
@@ -11,6 +10,7 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;900&display=swap"
     rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -73,7 +73,7 @@
       <div class="container px-5">
         <div class="bg-light rounded-4 py-5 px-4 px-md-5 shadow">
           <div class="text-center mb-5">
-            <div class="feature bg-primary text-white rounded-3 mb-3">
+            <div class="feature bg-primary text-white rounded-3 mb-3 mx-auto">
               <i class="bi bi-envelope"></i>
             </div>
             <h1 class="fw-bolder">Entre em contato</h1>
@@ -143,134 +143,35 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Theme Toggle Logic
+    const toggleButton = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlElement = document.documentElement;
 
+    // Set initial icon
+    if (htmlElement.getAttribute('data-theme') === 'dark') {
+      themeIcon.classList.remove('bi-moon-stars-fill');
+      themeIcon.classList.add('bi-sun-fill');
+    }
+
+    toggleButton.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+
+      // Toggle Icon
+      if (newTheme === 'dark') {
+        themeIcon.classList.remove('bi-moon-stars-fill');
+        themeIcon.classList.add('bi-sun-fill');
+      } else {
+        themeIcon.classList.remove('bi-sun-fill');
+        themeIcon.classList.add('bi-moon-stars-fill');
+      }
+    });
+  </script>
 </body>
 
 </html>
-=======
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contato - Jessé Vitorino</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;900&display=swap" rel="stylesheet" />
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-    
-    <style>
-      body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-      }
-      .feature {
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-      }
-    </style>
-  </head>
-  <body class="d-flex flex-column min-vh-100">
-
-    <main class="flex-shrink-0">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-        <div class="container px-5">
-          <a class="navbar-brand fw-bold text-primary" href="index.html">Portfólio</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto fw-bold small">
-              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-              <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-              <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Contato -->
-      <section class="py-5">
-        <div class="container px-5">
-          <div class="bg-light rounded-4 py-5 px-4 px-md-5 shadow">
-            <div class="text-center mb-5">
-              <div class="feature bg-primary text-white rounded-3 mb-3">
-                <i class="bi bi-envelope"></i>
-              </div>
-              <h1 class="fw-bolder">Entre em contato</h1>
-              <p class="lead fw-normal text-muted mb-0">Vamos construir algo juntos!</p>
-            </div>
-            <div class="row justify-content-center">
-              <div class="col-lg-8 col-xl-6">
-                <form action="https://formspree.io/f/mayvkjgj" method="POST">
-                  <!-- Nome -->
-                  <div class="form-floating mb-3">
-                    <input class="form-control" name="name" type="text" placeholder="Seu nome" required />
-                    <label for="name">Nome completo</label>
-                  </div>
-
-                  <!-- Email -->
-                  <div class="form-floating mb-3">
-                    <input class="form-control" name="email" type="email" placeholder="seu@email.com" required />
-                    <label for="email">Email</label>
-                  </div>
-
-                  <!-- Telefone -->
-                  <div class="form-floating mb-3">
-                    <input class="form-control" name="phone" type="tel" placeholder="(17) 99645-9685" required />
-                    <label for="phone">Telefone</label>
-                  </div>
-
-                  <!-- Mensagem -->
-                  <div class="form-floating mb-3">
-                    <textarea class="form-control" name="message" placeholder="Digite sua mensagem aqui..." style="height: 10rem" required></textarea>
-                    <label for="message">Mensagem</label>
-                  </div>
-
-                  <!-- Botão enviar -->
-                  <div class="d-grid mb-3">
-                    <button class="btn btn-primary btn-lg" type="submit">Enviar Mensagem</button>
-                  </div>
-                </form>
-
-                <!-- Botão WhatsApp -->
-                <div class="text-center">
-                  <a href="https://wa.me/5517996459685" target="_blank" class="btn btn-success">
-                    <i class="bi bi-whatsapp"></i> Me chame no WhatsApp
-                  </a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Rodapé -->
-    <footer class="bg-white py-4 mt-auto">
-      <div class="container px-5">
-        <div class="d-flex justify-content-between align-items-center flex-column flex-sm-row">
-          <div class="small">&copy; Jessé Vitorino 2025</div>
-          <div class="small">
-            <a href="#">Política de Privacidade</a>
-            <span class="mx-1">&middot;</span>
-            <a href="#">Termos</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  </body>
-</html>
->>>>>>> 53ed109f09013b67ba11ce3149dd4a423394d041
